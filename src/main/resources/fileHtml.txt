@@ -29,6 +29,7 @@
   <meta name="twitter:image:src" content="https://www.simbirsoft.com/local/templates/.default/img/og-main-pic.jpg"> 
   <meta name="twitter:image:width" content="900"> 
   <meta name="twitter:image:height" content="407"> 
+  <link rel="canonical" href="https://www.simbirsoft.com/"> 
   <link rel="shortcut icon" type="image/x-icon" href="/local/templates/.default/img/favicon.ico"> 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/16.0.4/css/intlTelInput.css"> 
   <meta name="theme-color" content="#ffffff"> 
@@ -1425,6 +1426,6 @@
   <script type="text/javascript" src="/bitrix/cache/js/s1/simbirsoft/template_bfe57154c483221016756808b0a99d31/template_bfe57154c483221016756808b0a99d31.js?1591856261332724"></script>
   <script type="text/javascript" src="/bitrix/cache/js/s1/simbirsoft/default_44bf8373f7aec10c2e9d1b0988d61428/default_44bf8373f7aec10c2e9d1b0988d61428.js?159185626114768"></script>
   <script type="text/javascript">var _ba = _ba || []; _ba.push(["aid", "02de4affeedd986cfee34fb78086b6ea"]); _ba.push(["host", "www.simbirsoft.com"]); (function() {var ba = document.createElement("script"); ba.type = "text/javascript"; ba.async = true;ba.src = (document.location.protocol == "https:" ? "https://" : "http://") + "bitrix.info/ba.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ba, s);})();</script>
-  <script>                var feedbackFormSuccess = "Спасибо! Ваше сообщение отправлено, мы обязательно ответим Вам в ближайшее время.";            </script><!--460921d2f08c513940ca302b21290b79-->
+  <script>                var feedbackFormSuccess = "Спасибо! Ваше сообщение отправлено, мы обязательно ответим Вам в ближайшее время.";            </script><!--b51e672deddeb431e7b9736be2b3d5fe-->
  </body>
 </html>
