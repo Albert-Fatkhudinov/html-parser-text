@@ -1,9 +1,9 @@
-package org.example.html.service;
+package org.example.html.service.connection;
 
 import org.example.html.exception.ConnectionException;
 import org.example.html.exception.ResponseException;
-import org.example.html.service.response.Response;
-import org.example.html.service.connection.Request;
+import org.example.html.service.connection.request.Request;
+import org.example.html.service.connection.response.Response;
 
 import java.io.InputStream;
 
@@ -11,13 +11,13 @@ import java.io.InputStream;
 /**
  * Класс-сервис для получение информации от хоста
  */
-public class HtmlServiceHandler implements ServiceHandler {
+public class ConnectionServiceHandler implements ConnectionHandler {
 
     private final Request request;
     private final Response response;
     private final String url;
 
-    public HtmlServiceHandler(Request request, Response response, String url) {
+    public ConnectionServiceHandler(Request request, Response response, String url) {
         this.request = request;
         this.response = response;
         this.url = url;

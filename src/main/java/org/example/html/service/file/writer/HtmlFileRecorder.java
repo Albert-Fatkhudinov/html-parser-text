@@ -1,4 +1,4 @@
-package org.example.html.service.writer;
+package org.example.html.service.file.writer;
 
 
 import lombok.extern.slf4j.Slf4j;
@@ -13,7 +13,7 @@ import java.nio.charset.StandardCharsets;
  * Класс для чтения из файла
  */
 @Slf4j
-public class FileRecorder implements Recorder {
+public class HtmlFileRecorder implements Recorder {
 
     /**
      * @param htmlText - html-страница в строковом представление
@@ -21,8 +21,8 @@ public class FileRecorder implements Recorder {
      * Метод записывает html-страницу в файл fileHtml.txt который находится на диске D:\
      */
     @Override
-    public void writeInFile(String htmlText) throws FileWriterException {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter("D:\\fileHtml.txt", StandardCharsets.UTF_8))) {
+    public void writeInFile(String htmlText, String fileName) throws FileWriterException {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, StandardCharsets.UTF_8))) {
             Document document = Jsoup.parse(htmlText);
             String html = document.html();
             writer.write(html);

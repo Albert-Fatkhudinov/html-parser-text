@@ -1,4 +1,4 @@
-package org.example.html.service.reader;
+package org.example.html.service.file.reader;
 
 import org.example.html.exception.FileReaderException;
 
@@ -7,5 +7,5 @@ import org.example.html.exception.FileReaderException;
  */
 public interface ReaderFile {
 
-    String readFromFile() throws FileReaderException;
+    String readFromFile(String fileName) throws FileReaderException;
 }

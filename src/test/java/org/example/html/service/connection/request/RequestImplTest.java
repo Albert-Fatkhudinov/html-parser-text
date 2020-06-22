@@ -1,4 +1,4 @@
-package org.example.html.service.connection;
+package org.example.html.service.connection.request;
 
 import org.example.html.exception.ConnectionException;
 import org.junit.jupiter.api.Test;

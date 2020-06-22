@@ -1,9 +1,9 @@
-package org.example.html.service;
+package org.example.html.service.file;
 
 import org.example.html.exception.FileReaderException;
 import org.example.html.exception.FileWriterException;
-import org.example.html.service.reader.ReaderFile;
-import org.example.html.service.writer.Recorder;
+import org.example.html.service.file.reader.ReaderFile;
+import org.example.html.service.file.writer.Recorder;
 
 /**
  * Класс для чтения и записи файла
@@ -26,7 +26,7 @@ public class FileServiceHandler implements FileHandler {
      */
     @Override
     public void writeFile() throws FileWriterException {
-        recorder.writeInFile(htmlString);
+        recorder.writeInFile(htmlString, "D:\\fileHtml.txt");
     }
 
     /**
@@ -36,6 +36,6 @@ public class FileServiceHandler implements FileHandler {
      */
     @Override
     public String readFile() throws FileReaderException {
-        return readerFile.readFromFile();
+        return readerFile.readFromFile("D:\\fileHtml.txt");
     }
 }

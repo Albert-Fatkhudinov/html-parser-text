@@ -12,8 +12,10 @@ class ParserHtmlTest {
 
     @Test
     void parseHtmlInContent() {
+
+        String[] testString = new String[]{"test1", "and", "test2", "test3"};
         Parser parser = new ParserHtml();
         String[] strings = parser.parseHtmlInContent(htmlTest);
-        Arrays.stream(strings).forEach(System.out::println);
+        assertArrayEquals(strings, testString);
     }
 }

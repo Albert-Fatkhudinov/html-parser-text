@@ -1,8 +1,9 @@
 package org.example.html.config;
 
-import org.example.html.service.Count;
-import org.example.html.service.FileHandler;
-import org.example.html.service.ServiceHandler;
+import org.example.html.dao.DaoController;
+import org.example.html.service.counter.Count;
+import org.example.html.service.file.FileHandler;
+import org.example.html.service.connection.ConnectionHandler;
 import org.example.html.service.parse.Parser;
 import org.junit.jupiter.api.Test;
 
@@ -12,7 +13,7 @@ class MainConfigTest {
 
     @Test
     void getServiceHandlerNotNull() {
-        ServiceHandler serviceHandler = MainConfig.getServiceHandler("https://www.test.com");
+        ConnectionHandler serviceHandler = MainConfig.getServiceHandler("https://www.test.com");
         assertNotNull(serviceHandler);
     }
 
@@ -32,5 +33,11 @@ class MainConfigTest {
     void getParserHtmlNotNull() {
         Parser parser = MainConfig.getParserHtml();
         assertNotNull(parser);
+    }
+
+    @Test
+    void getDaoNotNull() {
+        DaoController daoController = MainConfig.getDao();
+        assertNotNull(daoController);
     }
 }

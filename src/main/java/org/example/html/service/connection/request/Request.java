@@ -1,4 +1,4 @@
-package org.example.html.service.connection;
+package org.example.html.service.connection.request;
 
 import org.example.html.exception.ConnectionException;
 
@@ -6,7 +6,6 @@ import java.io.InputStream;
 
 /**
  * интерфейс для подключение к сайту
- * @throws ConnectionException
  */
 public interface Request {
 

@@ -1,4 +1,4 @@
-package org.example.html.service.response;
+package org.example.html.service.connection.response;
 
 import org.example.html.exception.ResponseException;
 

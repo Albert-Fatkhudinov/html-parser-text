@@ -1,4 +1,4 @@
-package org.example.html.service.reader;
+package org.example.html.service.file.reader;
 
 import lombok.extern.slf4j.Slf4j;
 import org.example.html.exception.FileReaderException;
@@ -20,9 +20,9 @@ public class HtmlFileReader implements ReaderFile {
      * Чтение происходит из файла fileHtml.txt которое находится на диске D:\
      */
     @Override
-    public String readFromFile() throws FileReaderException {
+    public String readFromFile(String fileName) throws FileReaderException {
         StringBuilder stringBuilder = new StringBuilder();
-        try (BufferedReader reader = new BufferedReader(new FileReader("D:\\fileHtml.txt", StandardCharsets.UTF_8))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(fileName, StandardCharsets.UTF_8))) {
             String line;
             while((line = reader.readLine()) != null) {
                 stringBuilder.append(line);

@@ -1,4 +1,4 @@
-package org.example.html.service.connection;
+package org.example.html.service.connection.request;
 
 import lombok.extern.slf4j.Slf4j;
 import org.example.html.exception.ConnectionException;
@@ -19,7 +19,8 @@ public class RequestImpl implements Request{
     /**
      * @param urlHtml - имя домена, обязательно с протоколом(MalformedURLException)
      * @return - возвращает поток ввода при удачном подключене
-     * @throws ConnectionException
+     * @throws ConnectionException - При возникновение IOException или
+     * если неправильно написано имя сайто
      */
     public InputStream connectToHost(String urlHtml) throws ConnectionException {
         try {

@@ -1,4 +1,4 @@
-package org.example.html.service;
+package org.example.html.service.counter;
 
 import java.util.HashMap;
 import java.util.Map;

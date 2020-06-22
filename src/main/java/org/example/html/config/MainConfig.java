@@ -1,15 +1,22 @@
 package org.example.html.config;
 
-import org.example.html.service.*;
-import org.example.html.service.connection.Request;
-import org.example.html.service.connection.RequestImpl;
+import org.example.html.dao.DaoService;
+import org.example.html.dao.WordDao;
+import org.example.html.service.connection.ConnectionServiceHandler;
+import org.example.html.service.connection.request.Request;
+import org.example.html.service.connection.request.RequestImpl;
+import org.example.html.service.connection.ConnectionHandler;
+import org.example.html.service.counter.Count;
+import org.example.html.service.counter.CounterWord;
+import org.example.html.service.file.FileHandler;
+import org.example.html.service.file.FileServiceHandler;
 import org.example.html.service.parse.ParserHtml;
-import org.example.html.service.reader.HtmlFileReader;
-import org.example.html.service.reader.ReaderFile;
-import org.example.html.service.response.Response;
-import org.example.html.service.response.ResponseImpl;
-import org.example.html.service.writer.FileRecorder;
-import org.example.html.service.writer.Recorder;
+import org.example.html.service.file.reader.HtmlFileReader;
+import org.example.html.service.file.reader.ReaderFile;
+import org.example.html.service.connection.response.Response;
+import org.example.html.service.connection.response.ResponseImpl;
+import org.example.html.service.file.writer.HtmlFileRecorder;
+import org.example.html.service.file.writer.Recorder;
 
 /**
  * Класс для сборки сервисов
@@ -21,10 +28,10 @@ public class MainConfig {
      * @param url - входной параметр ссылка страницы.
      * @return ServiceHandler - выходной параметр, cервис подключения и ответа от сайта;
      */
-    public static ServiceHandler getServiceHandler(String url) {
+    public static ConnectionHandler getServiceHandler(String url) {
         Request request = new RequestImpl();
         Response response = new ResponseImpl();
-        return new HtmlServiceHandler(request, response, url);
+        return new ConnectionServiceHandler(request, response, url);
     }
 
     /**
@@ -34,7 +41,7 @@ public class MainConfig {
      * @return FileHandler - выходной параметр, сервис записи и чтения фаила
      */
     public static FileHandler getFileHandler(String responseFromTheSite) {
-        Recorder recorder = new FileRecorder();
+        Recorder recorder = new HtmlFileRecorder();
         ReaderFile readerFile = new HtmlFileReader();
         return new FileServiceHandler(readerFile, recorder, responseFromTheSite);
     }
@@ -52,6 +59,13 @@ public class MainConfig {
      */
     public static ParserHtml getParserHtml() {
         return new ParserHtml();
+    }
+
+    /**
+     * @return возвращает экземпляр класса DaoService
+     */
+    public static DaoService getDao() {
+        return new DaoService(new WordDao());
     }
 
 

@@ -6,7 +6,7 @@ import java.util.Map;
 /**
  * Интерфейс дао для CRUD операции
  */
-public interface Dao {
+public interface DaoController {
 
     boolean saveInDataBase(Map<String, Integer> count);
 }

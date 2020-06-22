@@ -11,14 +11,16 @@ import java.util.Map;
  * Класс для подключения к базе данных(Hibernate)
  * и занесения данных в таблицу БД
  */
-public class WordDao implements Dao {
+public class WordDao {
 
     /**
      * Метод применятся для подключения к БД(PostgresSQL)
      * и для сохранения данных в таблицу.
      * Применяется транзакция, в случае ошибки транзакция откатывается.
      * @param count - map (слово, количество вхождений в тексте)
+     * @return boolean если все успешно возвращает true, иначе false
      * Запрос "INSERT INTO words VALUES (?, ?)"
+     *
      */
     public boolean saveInDataBase(Map<String, Integer> count) {
         boolean isComplete = false;

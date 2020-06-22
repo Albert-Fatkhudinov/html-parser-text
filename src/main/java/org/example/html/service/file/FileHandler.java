@@ -1,4 +1,4 @@
-package org.example.html.service;
+package org.example.html.service.file;
 
 import org.example.html.exception.FileReaderException;
 import org.example.html.exception.FileWriterException;

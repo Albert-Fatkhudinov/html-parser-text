@@ -1,4 +1,4 @@
-package org.example.html.service.writer;
+package org.example.html.service.file.writer;
 
 import org.example.html.exception.FileWriterException;
 
@@ -7,5 +7,5 @@ import org.example.html.exception.FileWriterException;
  */
 public interface Recorder {
 
-    void writeInFile(String htmlText) throws FileWriterException;
+    void writeInFile(String htmlText, String fileName) throws FileWriterException;
 }
