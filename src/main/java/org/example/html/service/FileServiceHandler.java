@@ -1,11 +1,9 @@
 package org.example.html.service;
 
-import org.example.html.service.exception.FileReaderException;
-import org.example.html.service.exception.FileWriterException;
+import org.example.html.exception.FileReaderException;
+import org.example.html.exception.FileWriterException;
 import org.example.html.service.reader.ReaderFile;
 import org.example.html.service.writer.Recorder;
-
-import java.io.IOException;
 
 /**
  * Класс для чтения и записи файла

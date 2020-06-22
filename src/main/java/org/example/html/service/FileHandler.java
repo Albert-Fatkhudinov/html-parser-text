@@ -1,7 +1,7 @@
 package org.example.html.service;
 
-import org.example.html.service.exception.FileReaderException;
-import org.example.html.service.exception.FileWriterException;
+import org.example.html.exception.FileReaderException;
+import org.example.html.exception.FileWriterException;
 
 import java.io.IOException;
 

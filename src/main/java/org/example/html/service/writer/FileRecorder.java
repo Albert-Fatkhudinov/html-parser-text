@@ -2,7 +2,7 @@ package org.example.html.service.writer;
 
 
 import lombok.extern.slf4j.Slf4j;
-import org.example.html.service.exception.FileWriterException;
+import org.example.html.exception.FileWriterException;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 

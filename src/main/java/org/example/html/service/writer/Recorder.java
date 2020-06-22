@@ -1,8 +1,6 @@
 package org.example.html.service.writer;
 
-import org.example.html.service.exception.FileWriterException;
-
-import java.io.IOException;
+import org.example.html.exception.FileWriterException;
 
 /**
  * Интерфейс для записи в файл

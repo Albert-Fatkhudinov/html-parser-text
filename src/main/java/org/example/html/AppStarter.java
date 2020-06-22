@@ -6,10 +6,10 @@ import org.example.html.dao.WordDao;
 import org.example.html.service.Count;
 import org.example.html.service.FileHandler;
 import org.example.html.service.ServiceHandler;
-import org.example.html.service.exception.ConnectionException;
-import org.example.html.service.exception.FileReaderException;
-import org.example.html.service.exception.FileWriterException;
-import org.example.html.service.exception.ResponseException;
+import org.example.html.exception.ConnectionException;
+import org.example.html.exception.FileReaderException;
+import org.example.html.exception.FileWriterException;
+import org.example.html.exception.ResponseException;
 import org.example.html.service.parse.Parser;
 import org.example.html.util.HibernateUtil;
 

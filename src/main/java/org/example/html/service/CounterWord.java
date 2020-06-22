@@ -15,10 +15,8 @@ public class CounterWord implements Count {
     public Map<String, Integer> count(String[] words) {
         Map<String, Integer> mapWords = new HashMap<>();
         for (String word: words) {
-            if (!"".equals(word)) {
-                String upperCaseWord = word.toUpperCase();
-                mapWords.merge(upperCaseWord, 1, Integer::sum);
-            }
+            String upperCaseWord = word.toUpperCase();
+            mapWords.merge(upperCaseWord, 1, Integer::sum);
         }
         return mapWords;
     }

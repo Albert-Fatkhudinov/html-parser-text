@@ -1,12 +1,11 @@
 package org.example.html.service.reader;
 
 import lombok.extern.slf4j.Slf4j;
-import org.example.html.service.exception.FileReaderException;
+import org.example.html.exception.FileReaderException;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 
 /**

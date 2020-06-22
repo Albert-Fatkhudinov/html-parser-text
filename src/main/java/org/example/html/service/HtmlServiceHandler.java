@@ -1,7 +1,7 @@
 package org.example.html.service;
 
-import org.example.html.service.exception.ConnectionException;
-import org.example.html.service.exception.ResponseException;
+import org.example.html.exception.ConnectionException;
+import org.example.html.exception.ResponseException;
 import org.example.html.service.response.Response;
 import org.example.html.service.connection.Request;
 

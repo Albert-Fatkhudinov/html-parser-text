@@ -1,8 +1,6 @@
 package org.example.html.service.reader;
 
-import org.example.html.service.exception.FileReaderException;
-
-import java.io.IOException;
+import org.example.html.exception.FileReaderException;
 
 /**
  * Интерфейс для чтения из файла

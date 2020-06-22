@@ -1,4 +1,4 @@
-package org.example.html.service.exception;
+package org.example.html.exception;
 
 /**
  * Класс исключение - Ошибка записи в файл

@@ -1,7 +1,7 @@
 package org.example.html.service.response;
 
 import lombok.extern.slf4j.Slf4j;
-import org.example.html.service.exception.ResponseException;
+import org.example.html.exception.ResponseException;
 
 import java.io.BufferedReader;
 import java.io.IOException;

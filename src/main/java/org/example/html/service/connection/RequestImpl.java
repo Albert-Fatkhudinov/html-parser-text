@@ -1,7 +1,7 @@
 package org.example.html.service.connection;
 
 import lombok.extern.slf4j.Slf4j;
-import org.example.html.service.exception.ConnectionException;
+import org.example.html.exception.ConnectionException;
 
 import java.io.IOException;
 import java.io.InputStream;

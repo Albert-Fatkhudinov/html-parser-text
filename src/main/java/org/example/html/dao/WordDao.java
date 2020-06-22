@@ -17,7 +17,8 @@ public class WordDao implements Dao {
      * Метод применятся для подключения к БД(PostgresSQL)
      * и для сохранения данных в таблицу.
      * Применяется транзакция, в случае ошибки транзакция откатывается.
-     * @param count - map (слова, количество вхождений в тексте)
+     * @param count - map (слово, количество вхождений в тексте)
+     * Запрос "INSERT INTO words VALUES (?, ?)"
      */
     public boolean saveInDataBase(Map<String, Integer> count) {
         boolean isComplete = false;
