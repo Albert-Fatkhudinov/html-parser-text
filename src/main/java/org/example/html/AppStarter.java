@@ -30,23 +30,17 @@ public class AppStarter {
                 consoleHelper.showString("Завершение приложения!");
                 return;
             }
-            ConnectionHandler serviceHandler = MainConfig.getServiceHandler(url);
-            String responseFromTheSite = serviceHandler.getResponseFromTheSite();
+            String responseFromTheSite = getResponseFromSite(url);
 
-            FileHandler handler = MainConfig.getFileHandler(responseFromTheSite);
-            handler.writeFile();
-            String htmlTextReadFile = handler.readFile();
+            String htmlTextReadFile = getHtmlReadFile(responseFromTheSite);
 
             Parser parserHtml = MainConfig.getParserHtml();
             String[] parseText = parserHtml.parseHtmlInContent(htmlTextReadFile);
 
-            Count counterWord = MainConfig.getCounterWord();
-            Map<String, Integer> count = counterWord.count(parseText);
+            Map<String, Integer> count = getStringIntegerMap(parseText);
 
-            DaoController dao = MainConfig.getDao();
-            boolean isComplete = dao.saveInDataBase(count);
-            HibernateUtil.shutdown();
-            count.forEach((key, value) -> System.out.println(key + " " + value));
+            saveInDataBase(count);
+
         } catch (ConnectionException |
                 ResponseException |
                 IOException |
@@ -60,5 +54,29 @@ public class AppStarter {
             consoleHelper.showString("Перезапуск приложения");
             start();
         }
+    }
+
+    private Map<String, Integer> getStringIntegerMap(String[] parseText) {
+        Count counterWord = MainConfig.getCounterWord();
+        Map<String, Integer> count = counterWord.count(parseText);
+        count.forEach((key, value) -> System.out.println(key + " " + value));
+        return count;
+    }
+
+    private void saveInDataBase(Map<String, Integer> count) {
+        DaoController dao = MainConfig.getDao();
+        boolean isComplete = dao.saveInDataBase(count);
+        HibernateUtil.shutdown();
+    }
+
+    private String getHtmlReadFile(String responseFromTheSite) throws IOException, FileWriterException, FileReaderException {
+        FileHandler handler = MainConfig.getFileHandler(responseFromTheSite);
+        handler.writeFile();
+        return handler.readFile();
+    }
+
+    private String getResponseFromSite(String url) throws IOException, ConnectionException, ResponseException {
+        ConnectionHandler serviceHandler = MainConfig.getServiceHandler(url);
+        return serviceHandler.getResponseFromTheSite();
     }
 }

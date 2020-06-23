@@ -5,11 +5,11 @@ import java.util.Map;
 /**
  * Класс-сервис для работы с базой данных
  */
-public class DaoService implements DaoController {
+public class DaoServiceController implements DaoController {
 
     private final WordDao wordDao;
 
-    public DaoService(WordDao wordDao) {
+    public DaoServiceController(WordDao wordDao) {
         this.wordDao = wordDao;
     }
 
