@@ -1,6 +1,6 @@
 package org.example.html.config;
 
-import org.example.html.dao.DaoService;
+import org.example.html.dao.DaoServiceController;
 import org.example.html.dao.WordDao;
 import org.example.html.service.connection.ConnectionServiceHandler;
 import org.example.html.service.connection.request.Request;
@@ -64,8 +64,8 @@ public class MainConfig {
     /**
      * @return возвращает экземпляр класса DaoService
      */
-    public static DaoService getDao() {
-        return new DaoService(new WordDao());
+    public static DaoServiceController getDao() {
+        return new DaoServiceController(new WordDao());
     }
 
 
