@@ -14,6 +14,9 @@ public class FileServiceHandler implements FileHandler {
     private final Recorder recorder;
     private final String htmlString;
 
+    public static final String FILE_PATH
+            = "C:\\Users\\Acer\\Desktop\\project\\html-parser-text\\src\\main\\resources\\fileHtml.txt";
+
     public FileServiceHandler(ReaderFile readerFile, Recorder recorder, String htmlString) {
         this.readerFile = readerFile;
         this.recorder = recorder;
@@ -26,7 +29,7 @@ public class FileServiceHandler implements FileHandler {
      */
     @Override
     public void writeFile() throws FileWriterException {
-        recorder.writeInFile(htmlString, "D:\\fileHtml.txt");
+        recorder.writeInFile(htmlString, FILE_PATH);
     }
 
     /**
@@ -36,6 +39,6 @@ public class FileServiceHandler implements FileHandler {
      */
     @Override
     public String readFile() throws FileReaderException {
-        return readerFile.readFromFile("D:\\fileHtml.txt");
+        return readerFile.readFromFile(FILE_PATH);
     }
 }

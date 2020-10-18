@@ -27,11 +27,9 @@ public class WordDao {
         Transaction transaction = null;
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             transaction = session.beginTransaction();
-
             count.forEach((key, value) -> session.save(new Word(key, value)));
             transaction.commit();
             isComplete = true;
-
         } catch (Exception e) {
             if (transaction != null) {
                 transaction.rollback();

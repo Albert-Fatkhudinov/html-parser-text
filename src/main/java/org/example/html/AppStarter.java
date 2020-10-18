@@ -31,22 +31,23 @@ public class AppStarter {
                 return;
             }
             String responseFromTheSite = getResponseFromSite(url);
-
             String htmlTextReadFile = getHtmlReadFile(responseFromTheSite);
-
             Parser parserHtml = MainConfig.getParserHtml();
             String[] parseText = parserHtml.parseHtmlInContent(htmlTextReadFile);
-
             Map<String, Integer> count = getStringIntegerMap(parseText);
-
-            saveInDataBase(count);
-
+            consoleHelper.showString("Сохранить в БД?");
+            String answer = consoleHelper.readString();
+            if ("y".equals(answer)) {
+                saveInDataBase(count);
+            }
+            consoleHelper.showString("Завершение программы!");
         } catch (ConnectionException |
                 ResponseException |
                 IOException |
                 FileReaderException |
                 FileWriterException |
-                ReadLineException exception) {
+                ReadLineException |
+                NullPointerException exception) {
             exception.printStackTrace();
 
             consoleHelper.showString("-------------------------->>>>>>>>>>>");
