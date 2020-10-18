@@ -15,7 +15,7 @@ public class FileServiceHandler implements FileHandler {
     private final String htmlString;
 
     public static final String FILE_PATH
-            = "C:\\Users\\Acer\\Desktop\\project\\html-parser-text\\src\\main\\resources\\fileHtml.txt";
+            = "src\\main\\resources\\fileHtml.txt";
 
     public FileServiceHandler(ReaderFile readerFile, Recorder recorder, String htmlString) {
         this.readerFile = readerFile;
