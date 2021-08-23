@@ -8,7 +8,7 @@
     <artifactId>html-parse-project</artifactId>
     <version>1.0</version>
     <properties>
-        <jsoup.version>1.13.1</jsoup.version>
+        <jsoup.version>1.14.2</jsoup.version>
         <lombok.version>1.18.12</lombok.version>
         <hibernate.version>5.4.17.Final</hibernate.version>
         <postgresql.version>42.2.12</postgresql.version>
